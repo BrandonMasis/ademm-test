@@ -213,6 +213,9 @@ nav ul a:hover{
     height: 50vh;
 }
 
+#sealSvg path{
+    fill: #D4C08D;
+}
 .Seal1{
     animation:fade .4s;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
