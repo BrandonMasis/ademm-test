@@ -110,9 +110,9 @@ nav ul a:hover{
     gap: 15px;
     width: 40%;
     
-    -webkit-animation:leftToRight 1.5s;
-    -moz-animation:leftToRight 1.5s;
-    animation:leftToRight 1.5s,fade 2s;
+    -webkit-animation:leftToRight,Lightfade 1.5s;
+    -moz-animation:leftToRight,Lightfade 1.5s;
+    animation:leftToRight 1.5s,Lightfade 2s;
 
 
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -176,22 +176,20 @@ nav ul a:hover{
 .homeImage{
     width: 50%;
     position: relative;
-    animation:fade 1s;
+    animation:Lightfade 1s;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.homeImage img:nth-child(1){
+.homeImage *:nth-child(1){
     width: 100%;
 }
 
-.homeImage img:nth-child(2){
+.homeImage >*:nth-child(2){
    position: absolute;
    z-index: 2;
    width: 30%;
-   right: 22rem;
-   top: 12rem;
-   -webkit-animation:spin 14s linear infinite;
-   -moz-animation:spin 14s linear infinite;
-   animation:spin 14s linear infinite;
+   right: 12rem;
+   bottom:5rem;
+   
   
 }
 
@@ -215,6 +213,34 @@ nav ul a:hover{
     height: 50vh;
 }
 
+.Seal1{
+    animation:fade .4s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Seal2{
+    animation:fade 1s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.Seal3{
+    animation:fade 1.5s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Seal4{
+    animation:fade 2s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Seal5{
+    animation:fade 2.8s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Seal6{
+    animation:fade 3.2s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
 
 @keyframes leftToRight { 
@@ -226,10 +252,22 @@ nav ul a:hover{
     } 
 } 
 
+
+@keyframes Lightfade{
+    0%{
+        opacity: 15%;
+   }
+   
+   100% { 
+      opacity: 100%;
+   } 
+}
+
 @keyframes fade{
     0%{
         opacity: 12%;
    }
+   
    100% { 
       opacity: 100%;
    } 
