@@ -60,6 +60,21 @@ nav ul a{
     font-weight: 500;
 }
 
+nav ul a:hover{
+    text-decoration: underline 1px;
+    
+}
+
+#navContact:hover{
+    background-color: var(--dark);
+}
+#navContact:hover a{
+    text-decoration: none;
+    
+    color: var(--light) ;
+    
+}
+
 #navContact{
     background-color: var(--light);
     padding: 5px 10px;
@@ -94,6 +109,13 @@ nav ul a{
     flex-direction: column;
     gap: 15px;
     width: 40%;
+    
+    -webkit-animation:leftToRight 1.5s;
+    -moz-animation:leftToRight 1.5s;
+    animation:leftToRight 1.5s,fade 2s;
+
+
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
    
 }
 
@@ -103,6 +125,7 @@ nav ul a{
     font-size: 3rem;
     width: 35rem;
     line-height: 1;
+    
 }
 
 .homeText h1 span{
@@ -124,6 +147,7 @@ nav ul a{
 
     align-items: center;
     gap: 5px;
+    cursor: pointer;
 }
 
 .button a{
@@ -152,6 +176,8 @@ nav ul a{
 .homeImage{
     width: 50%;
     position: relative;
+    animation:fade 1s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .homeImage img:nth-child(1){
     width: 100%;
@@ -166,6 +192,7 @@ nav ul a{
    -webkit-animation:spin 14s linear infinite;
    -moz-animation:spin 14s linear infinite;
    animation:spin 14s linear infinite;
+  
 }
 
 
@@ -188,3 +215,22 @@ nav ul a{
     height: 50vh;
 }
 
+
+
+@keyframes leftToRight { 
+    0%{
+         transform: translateX(-60px);
+    }
+    100% { 
+       transform: translateX(0px);
+    } 
+} 
+
+@keyframes fade{
+    0%{
+        opacity: 12%;
+   }
+   100% { 
+      opacity: 100%;
+   } 
+}
