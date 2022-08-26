@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+/* font-family: 'Lato', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Source Sans Pro', sans-serif; */
+
+:root{
+    --red:#B12322;
+    --dark:#56423E;
+    --light:#F3EED9;
+    --gold:#DECEA5;
+
+    --playfair:'Playfair Display', serif;
+    --sourceSans:'Source Sans Pro', sans-serif;
+    --lato:'Lato', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Navbar */
+/* 1080px max widt */
+
+.NavContainer{
+    max-width: 1080px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+nav{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background-color: var(--red);
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;   
+    margin-top: 1rem;
+    
+}
+
+nav ul a{
+    text-decoration: none;
+    color: var(--light);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+#navContact{
+    background-color: var(--light);
+    padding: 5px 10px;
+    border-radius: 50px;
+    
+}
+
+#navContact a{
+    color: var(--dark);
+}
+
+/* Home section */
+#home{
+    background-color: var(--red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.homeContainer{
+    max-width: 1080px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+
+.homeText{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+   
+}
+
+.homeText h1{
+    color: white;
+    font-family: var(--playfair);
+    font-size: 3rem;
+    width: 35rem;
+    line-height: 1;
+}
+
+.homeText h1 span{
+    letter-spacing: -2px;
+  
+}
+
+.homeText p{
+    color: white;
+    font-family: var(--sourceSans);
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+
+
+.button{
+    display: flex;
+
+    align-items: center;
+    gap: 5px;
+}
+
+.button a{
+    font-family: var(--sourceSans);
+    text-decoration: underline 2px;
+    color: var(--light);
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+.button>*:nth-child(2){
+    display: flex;
+    
+    align-items: center;
+    padding-top: 2px;
+    background-color: var(--light);
+    color: var(--red);
+
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+
+}
+
+.homeImage{
+    width: 50%;
+    position: relative;
+}
+.homeImage img:nth-child(1){
+    width: 100%;
+}
+
+.homeImage img:nth-child(2){
+   position: absolute;
+   z-index: 2;
+   width: 30%;
+   right: 22rem;
+   top: 12rem;
+   -webkit-animation:spin 14s linear infinite;
+   -moz-animation:spin 14s linear infinite;
+   animation:spin 14s linear infinite;
+}
+
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+
+.test{
+    background-color: rgb(34, 33, 33);
+    height: 50vh;
+}
+
