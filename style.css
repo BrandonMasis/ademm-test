@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-/* font-family: 'Lato', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Source Sans Pro', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 :root{
     --red:#B12322;
@@ -12,15 +9,37 @@ font-family: 'Source Sans Pro', sans-serif; */
     --playfair:'Playfair Display', serif;
     --sourceSans:'Source Sans Pro', sans-serif;
     --lato:'Lato', sans-serif;
+    --dmSerif: 'DM Serif Text', serif;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--dark);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--light);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+  }
 
 /* Navbar */
 /* 1080px max widt */
@@ -35,7 +54,7 @@ font-family: 'Source Sans Pro', sans-serif; */
 
 nav{
     font-family: 'Lato', sans-serif;
-    color: white;
+    
     background-color: var(--red);
     
     display: flex;
@@ -47,17 +66,17 @@ nav{
 nav ul{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     list-style: none;   
-    margin-top: 1rem;
+    margin-top: 1.8rem;
     
 }
 
 nav ul a{
     text-decoration: none;
-    color: var(--light);
-    font-size: .9rem;
-    font-weight: 500;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 nav ul a:hover{
@@ -76,15 +95,13 @@ nav ul a:hover{
 }
 
 #navContact{
-    background-color: var(--light);
+    background-color: rgba(241, 241, 241, 0.164);
     padding: 5px 10px;
     border-radius: 50px;
     
 }
 
-#navContact a{
-    color: var(--dark);
-}
+
 
 /* Home section */
 #home{
@@ -107,7 +124,7 @@ nav ul a:hover{
 .homeText{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
     width: 40%;
     
     -webkit-animation:leftToRight,Lightfade 1.5s;
@@ -121,15 +138,20 @@ nav ul a:hover{
 
 .homeText h1{
     color: white;
-    font-family: var(--playfair);
+    font-family: var(--dmSerif);
     font-size: 3rem;
     width: 35rem;
     line-height: 1;
+    font-weight: normal;
     
 }
 
-.homeText h1 span{
+.homeText h1 span:nth-child(1){
     letter-spacing: -2px;
+  
+}
+.homeText h1 span:nth-child(2){
+    text-decoration: underline 4px var(--gold);
   
 }
 
@@ -144,7 +166,6 @@ nav ul a:hover{
 
 .button{
     display: flex;
-
     align-items: center;
     gap: 5px;
     cursor: pointer;
@@ -152,10 +173,15 @@ nav ul a:hover{
 
 .button a{
     font-family: var(--sourceSans);
-    text-decoration: underline 2px;
-    color: var(--light);
+    text-decoration: none;
+    color: var(--dark);
     font-size: 1.2rem;
     margin-bottom: 2px;
+
+    background-color: var(--gold);
+    padding: 8px 15px;
+    font-weight: 600;
+    border-radius: 10px 0px;
 }
 
 .button>*:nth-child(2){
@@ -217,31 +243,31 @@ nav ul a:hover{
     fill: #D4C08D;
 }
 .Seal1{
-    animation:fade .4s;
+    animation:fade 1s;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .Seal2{
-    animation:fade 1s;
+    animation:fade 2s;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .Seal3{
-    animation:fade 1.5s;
+    animation:fade 3s;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .Seal4{
-    animation:fade 2s;
+    animation:fade 4s;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .Seal5{
-    animation:fade 2.8s;
+    animation:fade 5s;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .Seal6{
-    animation:fade 3.2s;
+    animation:fade 6s;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -268,7 +294,11 @@ nav ul a:hover{
 
 @keyframes fade{
     0%{
-        opacity: 12%;
+        opacity: 0%;
+   }
+
+   50%{
+    opacity: 0%;
    }
    
    100% { 
